@@ -1,0 +1,191 @@
+/* Variables */
+:root {
+  --background-dark-80: #333333;
+  --background-dark-70: #444444;
+  --background-orange: #00ffff;
+  --background-dark-60: #666666;
+
+  --darker-bg: #0f051a;
+
+  --primary-cyan: #00ffff;
+  --primary-pink: #ff00ff;
+
+  --hover: radial-gradient(
+      circle at 20% 30%,
+      rgba(0, 255, 255, 0.15) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(255, 0, 255, 0.15) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 40% 80%,
+      rgba(124, 58, 237, 0.15) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 60% 20%,
+      rgba(249, 115, 22, 0.15) 0%,
+      transparent 50%
+    );
+  --hover-purple: rgba(255, 0, 255, 0.089);
+
+  /* Custom scrollbar */
+
+  --color-white-100: #ffffff;
+  --color-white-95: #f5f5f5;
+  --color-white-80: #d5d5d5;
+  --color-white-60: #aaaaaa;
+  --color-white-70: #bbbbbb;
+
+  /* Font Size */
+  --font-size-48: 48px;
+  --font-size-24: 24px;
+  --font-size-21: 21px;
+  --font-size-18: 18px;
+  --font-size-14: 14px;
+  --font-size-12: 12px;
+  --font-size-11: 11px;
+  --font-size-30: 30px;
+  --font-size-16: 16px;
+  --font-size-13: 13px;
+
+  /* Others */
+  --transition-default: 0.25s ease;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--darker-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--primary-cyan), var(--primary-pink));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(var(--primary-pink), var(--primary-cyan));
+}
+
+/* Reset & Default Style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  color: var(--color-white-95);
+}
+
+body {
+  height: 100vh;
+  background: var(--background-dark-100);
+  overflow: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--color-white-95);
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+  font-weight: 600;
+}
+
+h1 {
+  font-size: var(--font-size-48);
+  margin-bottom: 10px;
+}
+h2 {
+  font-size: var(--font-size-21);
+  margin-bottom: 30px;
+  box-shadow: inset 0 -2px 0 var(--background-orange);
+  width: fit-content;
+}
+h3 {
+  font-size: var(--font-size-18);
+  margin-bottom: 5px;
+}
+
+p,
+blockquote {
+  color: var(--color-white-80);
+  font-size: var(--font-size-14);
+  line-height: 1.8;
+}
+
+::selection {
+  background: var(--background-orange);
+  color: var(--color-white-100);
+}
+
+.btn-primary {
+  padding: 8px 30px;
+  border: 1px solid var(--primary-cyan);
+  font-size: var(--font-size-14);
+  transition: var(--transition-default);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.btn-primary:hover {
+  background: var(--hover);
+  color: var(--color-white-100);
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* main container */
+.container {
+  position: relative;
+  max-width: 1440px;
+  height: 100vh;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Page styles */
+.page {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  transform: scale(0.5);
+  width: calc(100% - 165px);
+  height: 100%;
+  background: transparent;
+  overflow-y: auto;
+  transition: all 0.5s ease;
+  opacity: 0;
+  z-index: 1;
+}
+.page.active {
+  top: 0;
+  transform: scale(1);
+  opacity: 1;
+  z-index: 10;
+}
+
+/* Responsive base */
+@media screen and (max-width: 1024px) {
+  .page {
+    width: 100%;
+    left: 0;
+    margin-top: 55px;
+  }
+}

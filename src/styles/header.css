@@ -1,0 +1,39 @@
+/* Mobile navbar */
+.nav-mobile {
+  position: fixed;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: var(--background-dark-90);
+  border-bottom: 1px solid var(--background-dark-70);
+  padding: 10px 20px;
+  z-index: 200;
+}
+.nav-mobile .navbar-brand {
+  display: flex;
+  align-items: center;
+}
+.nav-mobile .brand-img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+.nav-mobile .brand-name {
+  font-size: var(--font-size-18);
+  margin-bottom: 0;
+}
+.nav-mobile .menu-toggler {
+  font-size: var(--font-size-24);
+  cursor: pointer;
+  color: var(--color-white-95);
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-mobile {
+    display: flex;
+  }
+}

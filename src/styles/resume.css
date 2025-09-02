@@ -1,0 +1,125 @@
+/* Resume */
+.resume-content {
+  padding: 50px 70px;
+  background: rgba(0, 0, 0, 0.041); /* thoda dark transparent */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.section-heading {
+  font-size: var(--font-size-30);
+  border-bottom: 2px solid var(--background-dark-60);
+  padding-bottom: 5px;
+}
+.section-sub-heading {
+  font-size: var(--font-size-14);
+  text-align: right;
+  font-weight: 300;
+  color: var(--color-white-70);
+  margin-bottom: 40px;
+}
+
+.resume-row {
+  display: flex;
+}
+.resume-row .wrapper:nth-child(1) {
+  width: 65%;
+  margin-right: 40px;
+}
+.resume-row .wrapper:nth-child(2) {
+  width: 35%;
+}
+
+.resume-row .wrapper :is(.edu, .exp) {
+  margin-bottom: 80px;
+}
+.resume-row h2 {
+  margin-bottom: 20px;
+  font-size: var(--font-size-21);
+  box-shadow: inset 0 -2px 0 var(--background-orange);
+  width: fit-content;
+}
+
+.resume-row .grid-item {
+  position: relative;
+  grid-template-columns: 0.5fr 1fr;
+  grid-gap: 0px 50px;
+  margin-bottom: 20px;
+}
+.resume-row .grid-item .year {
+  text-align: right;
+  font-size: var(--font-size-14);
+}
+.resume-row .grid-item .company {
+  text-align: right;
+  font-size: var(--font-size-12);
+  color: var(--color-white-70);
+}
+.resume-row .grid-item :is(.edu-desc, .exp-desc) {
+  font-size: var(--font-size-13);
+  color: var(--color-white-80);
+  line-height: 1.8;
+}
+.resume-row .grid-item .divider {
+  position: absolute;
+  top: 0;
+  left: 34.5%;
+  width: 1px;
+  height: calc(100% + 40px);
+  background: var(--background-dark-60);
+}
+.resume-row .grid-item .divider::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: -3px;
+  width: 8px;
+  height: 8px;
+  border-radius: 10px;
+  background: var(--background-dark-90);
+  box-shadow: 0 0 0 2px var(--background-orange);
+}
+
+/* Skills */
+.resume-row .design-skill {
+  margin: 50px 0;
+}
+.resume-row .progress-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.resume-row .progress-detail .progress-percent {
+  font-size: var(--font-size-11);
+  font-weight: 300;
+  color: var(--color-white-60);
+}
+.resume-row .progress-bar {
+  width: 100%;
+  height: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--background-orange);
+  padding: 2px;
+  margin-bottom: 10px;
+}
+.resume-row .progress {
+  height: 100%;
+  border-radius: 10px;
+  background: var(--background-orange);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .resume-content {
+    padding: 15px;
+  }
+  .resume-row {
+    flex-direction: column;
+  }
+  .resume-row .wrapper {
+    width: 100% !important;
+  }
+  .resume-row .wrapper:nth-child(1) {
+    margin-right: 0;
+  }
+}
