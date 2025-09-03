@@ -1,4 +1,3 @@
-import React from "react";
 import {
   IoCallOutline,
   IoLocationOutline,
@@ -20,7 +19,7 @@ const Contact = () => {
 
         <div className="info-box">
           <IoLocationOutline />
-          <p>Pakistan, Abbottabad</p>
+          <p>Pakistan, T.T Singh</p>
         </div>
 
         <a
@@ -30,7 +29,7 @@ const Contact = () => {
           rel="noopener noreferrer"
         >
           <IoMailOutline />
-          <p>waleedishfaq1515@gmail.com</p>
+          <p>komal@gmail.com</p>
         </a>
 
         <div className="info-box">
@@ -40,7 +39,7 @@ const Contact = () => {
       </div>
 
       <div className="contact-form">
-        <form action="https://formspree.io/f/mgvwyqyb" method="POST">
+        <form action="#s" method="POST">
           <div className="form-grid">
             <div className="grid-left">
               <input type="text" required placeholder="Full Name" name="name" />
